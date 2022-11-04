@@ -7,6 +7,18 @@ be nice to have this kind of highlighting in Notepad++?
 
 ![A multiple sequence alignment file after colorizing with protein_lexer.py](/protein_lexer_after.PNG)
 
+## EnhanceAnyLexer version
+
+This should be preferred if you have Notepad++ 8.4.3 or later (any version where [EnhanceAnyLexer](https://github.com/Ekopalypse/EnhanceAnyLexer/tree/1bf2191656deb9f029c98046ca77f9f004870e74) can be installed).
+
+1. Install the EnhanceAnyLexer plugin.
+2. Add `protein_lexer_udl.xml` into the `userDefineLang` folder as a child of the `NotepadPlus` element.
+3. Add `protein_lexer.ini` into `EnhanceAnyLexerConfig.ini`.
+4. Now this installation of Notepad++ will have colored proteins!
+
+## PythonScript version
+
+
 I've created a script with the [PythonScript plugin](https://npppythonscript.sourceforge.net/) that colorizes protein files.
 Go to that link for info on how to install the plugin.
 
@@ -34,6 +46,7 @@ ACID_STYLE = (0xbe, 0, 0) # red
 
 and the file extensions are just above that.
 
+
 By default the colors for amino acids are as follows:
 
 <section>
@@ -51,7 +64,7 @@ Any characters other than the standard one-letter codes will also be colored bla
 
 1. The lexer is quite slow. For example, there's a noticeable delay in lexing even a 5kb file. It's faster when loading a file than it is when lexing a pre-opened file, though. Not sure if there's any way to fix this.
 2. Consider only applying styles to large blocks of several (say 8+) contiguous UPPERCASELETTERS. That might reduce performance though.
-2. For some more recent versions of Notepad++ (this probably doesn't apply for anything before `8.4.6`), the little colored swatch at the side of a line that indicates if there was a saved or unsaved change since the file was opened will consume the entire line once the plugin has been run (see below). Not sure how to fix this.
+3. For some more recent versions of Notepad++ (this probably doesn't apply for anything before `8.4.6`), the little colored swatch at the side of a line that indicates if there was a saved or unsaved change since the file was opened will consume the entire line once the plugin has been run (see below). Not sure how to fix this.
 
 ![Annoying orange line for unsaved changes after plugin runs](/how_unsaved_changes_look_after_plugin_runs.PNG)
 
