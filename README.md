@@ -1,4 +1,4 @@
-# NPP Protein Lexer
+# Notepad++ Protein Lexer
 It can be helpful when looking at a protein sequence to be able to quickly identify
 regions that are hydrophilic, acidic, basic, lipophilic, and so on.
 
@@ -49,7 +49,8 @@ Any characters other than the standard one-letter codes will also be colored bla
 
 # TODO
 
-1. Consider only applying styles to large blocks of several (say 8+) contiguous UPPERCASELETTERS. That might reduce performance though.
+1. The lexer is quite slow. For example, there's a noticeable delay in lexing even a 5kb file. It's faster when loading a file than it is when lexing a pre-opened file, though. Not sure if there's any way to fix this.
+2. Consider only applying styles to large blocks of several (say 8+) contiguous UPPERCASELETTERS. That might reduce performance though.
 2. For some more recent versions of Notepad++ (this probably doesn't apply for anything before `8.4.6`), the little colored swatch at the side of a line that indicates if there was a saved or unsaved change since the file was opened will consume the entire line once the plugin has been run (see below). Not sure how to fix this.
 
 ![Annoying orange line for unsaved changes after plugin runs](/how_unsaved_changes_look_after_plugin_runs.PNG)
