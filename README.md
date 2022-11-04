@@ -50,3 +50,10 @@ Any characters other than the standard one-letter codes will also be colored bla
 # TODO
 
 1. Consider only applying styles to large blocks of several (say 8+) contiguous UPPERCASELETTERS. That might reduce performance though.
+2. For some more recent versions of Notepad++ (this probably doesn't apply for anything before `8.4.6`), the little colored swatch at the side of a line that indicates if there was a saved or unsaved change since the file was opened will consume the entire line once the plugin has been run (see below). Not sure how to fix this.
+
+![Annoying orange line for unsaved changes after plugin runs](/how_unsaved_changes_look_after_plugin_runs.PNG)
+
+For reference, it should look like this:
+
+![How unsaved changes should look](/how_unsaved_changes_should_look.PNG)
